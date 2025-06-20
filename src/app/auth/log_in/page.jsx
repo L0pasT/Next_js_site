@@ -13,11 +13,11 @@ export default function AuthPage() {
 
         <form className="space-y-4">
           <div>
-            <label className="block text-sm text-[#000000] mb-1">Email</label>
+            <label className="block text-sm text-[#000000] mb-1">Почта или имя пользователя</label>
             <input
               type="email"
-              className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#21272E]"
-              placeholder="example@mail.com"
+              className="text-black w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#21272E]"
+              placeholder="yourmail@example.com"
               required
             />
           </div>
@@ -27,8 +27,7 @@ export default function AuthPage() {
             <div className="relative">
               <input
                 type={showPassword ? 'text' : 'password'}
-                className="w-full border border-gray-300 rounded px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-[#21272E]"
-                placeholder="••••••••"
+                className="text-black w-full border border-gray-300 rounded px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-[#21272E]"
                 required
               />
               <button
@@ -50,7 +49,10 @@ export default function AuthPage() {
         </form>
 
         <p className="text-sm text-[#5B5D67] mt-6">
-          Нет аккаунта? <a href="#" className="text-[#21272E] hover:underline">Зарегистрироваться</a>
+          Нет аккаунта?{' '}
+          <Link href="/auth/registration" className="text-[#21272E] hover:underline">
+            Зарегистрироваться
+          </Link>
         </p>
 
         <Link

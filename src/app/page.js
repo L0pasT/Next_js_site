@@ -1,15 +1,16 @@
 import Header from './components/Header'
+import HeroSection from './components/HeroSection'
+
 
 export default function HomePage() {
   return (
     <>
       <Header />
-
-      <section className="bg-[#21272E] text-center py-20">
-        <h1 className="text-4xl font-bold mb-4">Профессиональные утилиты для 3D</h1>
-        <p className="text-lg text-white-700 mb-8">Создавайте уникальные дизайны с нашими инструментами для 3ds Max</p>
-        <button className="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition">Начать</button>
-      </section>
+      <HeroSection 
+        title="Профессиональные утилиты для 3D"
+        description="Создавайте уникальные дизайны с нашими инструментами для 3ds Max..."
+        buttonText="Начать"
+      />
 
       <section className="py-16 px-4 md:px-10 text-center bg-[#D9D9D9]">
         <h2 className="text-3xl text-black font-semibold mb-6">Наша миссия - упрощать</h2>

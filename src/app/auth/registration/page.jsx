@@ -7,35 +7,50 @@ export default function RegisterPage() {
     const router = useRouter()
 
     return (
-    <div className="min-h-screen bg-[#D9D9D9] flex items-center justify-center px-4">
-        <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-            <h1 className="text-2xl font-bold text-[#000000] mb-2">Регистрация</h1>
-            <p className="text-sm text-[#5B5D67] mb-6">Заполните форму для создания аккаунта</p>
+        <div className="min-h-screen bg-[#D9D9D9] flex items-center justify-center px-4">
+        <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl">
+            <h1 className="text-2xl font-bold text-[#000000] mb-6 text-center">Регистрация</h1>
 
-            <form className="space-y-4">
-            <div>
-                <label className="block text-sm text-[#000000] mb-1">Имя пользователя</label>
+            {/* Блок с полями */}
+            <form className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            {/* Левая часть — Имя и Фамилия */}
+            <div className="space-y-4">
+                <div>
+                <label className="block text-sm text-[#000000] mb-1">
+                    Имя <span className="text-red-500" title="Обязательное поле">*</span>
+                </label>
                 <input
-                type="text"
-                className="text-black w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#21272E]"
-                placeholder="Ваш никнейм"
-                required
+                    type="text"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-[#21272E]"
+                    required
                 />
+                </div>
+
+                <div>
+                <label className="block text-sm text-[#000000] mb-1">
+                    Фамилия <span className="text-red-500" title="Обязательное поле">*</span>
+                </label>
+                <input
+                    type="text"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-[#21272E]"
+                    required
+                />
+                </div>
             </div>
 
-            <div>
-                <label className="block text-sm text-[#000000] mb-1">Логин (почта или телефон)</label>
+            {/* Правая часть — логин, пароль */}
+            <div className="space-y-4">
+                <div>
+                <label className="block text-sm text-[#000000] mb-1">Логин</label>
                 <input
-                type="text"
-                className="text-black w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#21272E]"
-                placeholder="email@example.com или +79991234567"
-                required
+                    type="text"
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-[#21272E]"
+                    required
                 />
-            </div>
+                </div>
 
-            <div>
-                <label className="block text-sm text-[#000000] mb-1">Пароль</label>
                 <div className="relative">
+                <label className="block text-sm text-[#000000] mb-1">Пароль</label>
                 <input
                     type={showPassword ? 'text' : 'password'}
                     className="text-black w-full border border-gray-300 rounded px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-[#21272E]"
@@ -50,22 +65,32 @@ export default function RegisterPage() {
                 </button>
                 </div>
             </div>
-
-            <button
-                type="submit"
-                className="w-full bg-[#21272E] text-white py-2 rounded hover:bg-[#1a1f25] transition"
-            >
-                Создать
-            </button>
             </form>
 
+            {/* Блок с кнопками и соглашением */}
+            <div className="flex flex-col items-center space-y-4">
+            <button
+                type="submit"
+                className="w-full max-w-sm bg-[#21272E] text-white py-2 rounded-[28px] hover:bg-[#1a1f25] transition"
+            >
+                Создать аккаунт
+            </button>
+
+            <p className="text-xs text-[#5B5D67] text-center max-w-sm">
+                Нажимая &quot;Создать аккаунт&quot;, вы соглашаетесь с{' '}
+                <a href="#" className="underline text-[#21272E] hover:opacity-80">Пользовательским соглашением</a>.
+            </p>
+            </div>
+
+            <div className="w-full max-w-sm self-start">
             <button
             onClick={() => router.push('/')}
-            className="inline-block mt-6 text-sm text-[#21272E] border border-[#21272E] px-4 py-1 rounded hover:bg-[#21272E] hover:text-white transition"
+            className="text-sm text-[#21272E] border border-[#21272E] px-5 py-1 rounded-[28px] hover:bg-[#21272E] hover:text-white transition"
             >
-            Вернуться на главную
+            Назад
             </button>
+            </div>
         </div>
-    </div>
+        </div>
     )
 }

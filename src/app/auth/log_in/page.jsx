@@ -42,7 +42,7 @@ export default function AuthPage() {
 
           <button
             type="submit"
-            className="w-full bg-[#21272E] text-white py-2 rounded hover:bg-[#1a1f25] transition"
+            className="w-full bg-[#21272E] text-white py-2 rounded-[28px] hover:bg-[#1a1f25] transition"
           >
             Войти
           </button>
@@ -57,7 +57,7 @@ export default function AuthPage() {
 
         <Link
           href="/"
-          className="inline-block mt-4 text-sm text-[#21272E] border border-[#21272E] px-4 py-1 rounded hover:bg-[#21272E] hover:text-white transition"
+          className="inline-block mt-4 text-sm text-[#21272E] border border-[#21272E] px-4 py-1 rounded-[28px] hover:bg-[#21272E] hover:text-white transition"
         >
           Назад
         </Link>

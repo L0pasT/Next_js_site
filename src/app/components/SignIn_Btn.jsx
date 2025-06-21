@@ -8,7 +8,7 @@ export default function SignIn_Btn() {
   return (
     <Link
       href="/auth/log_in"
-      className="group relative inline-flex items-center justify-center border-2 border-[#21272E] bg-[#21272E] text-white font-pt text-[16px] rounded-[5px] overflow-hidden px-4 py-2 transition-all duration-800 ease-out cursor-pointer select-none w-[200px]"
+      className="group relative inline-flex items-center justify-center border-2 border-[#21272E] bg-[#21272E] text-white font-pt text-[16px] rounded-[28px] overflow-hidden px-4 py-2 transition-all duration-800 ease-out cursor-pointer select-none w-[200px]"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
